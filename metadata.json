@@ -1,0 +1,8 @@
+{
+  "name": "Live Voice Translator",
+  "description": "Listen to the microphone and translate live speech into multiple selected languages.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": []
+}

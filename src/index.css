@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-app-bg: #05070a;
+  --color-app-accent: #00f2ff;
+  --color-app-accent-dim: rgba(0, 242, 255, 0.1);
+  --color-app-glass: rgba(255, 255, 255, 0.03);
+  --color-app-glass-hover: rgba(255, 255, 255, 0.06);
+  --color-app-glass-border: rgba(255, 255, 255, 0.08);
+  --color-app-text-p: #e0e6ed;
+  --color-app-text-s: #94a3b8;
+  
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: 'Georgia', serif;
+}
+
+body {
+  background-color: var(--color-app-bg);
+  color: var(--color-app-text-p);
+  font-family: var(--font-sans);
+}
+
+.atmosphere {
+  position: fixed;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 50% -20%, #112240 0%, transparent 50%), 
+    radial-gradient(circle at 80% 80%, #0c1a30 0%, transparent 50%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.glass-panel {
+  background: var(--color-app-glass);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--color-app-glass-border);
+}
+
+.glass-pill {
+  background: var(--color-app-glass);
+  border: 1px solid var(--color-app-glass-border);
+  color: var(--color-app-text-s);
+}
+
+.glass-pill.active {
+  background: var(--color-app-accent-dim);
+  border-color: var(--color-app-accent);
+  color: var(--color-app-accent);
+}
+
